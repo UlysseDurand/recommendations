@@ -1,5 +1,9 @@
 # Recommendations
 Book/Website recommendation
+## See the recommendations :
+You can see the recommendations in a HTML file [here](https://htmlpreview.github.io/?https://github.com/ulyssedurand/recommendations/blob/master/index.html).
+
+You can see the recommendations in a PDF file [here](https://github.com/UlysseDurand/recommendations/raw/master/recommendations.pdf).
 
 ## Change recommendations :
 Every information is stored in the reco.json file, which has the following structure :
