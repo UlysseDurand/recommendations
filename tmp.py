@@ -1,11 +1,19 @@
 import json
-data = json.loads(open("reco.json").read())
+data = json.loads(open('reco.json').read())
+
 print("")
 
 def printbook(e):
     print("\\subsubsection{"+e["title"]+"}")
     print("\\textit{By "+e["author"]+"}\\\\\\\\")
-    print("First published in "+e["year"])
+    print("First published in "+e["year"]+"\\\\\\\\")
+    if ("trad" in e):
+        for key,value in e["trad"].items():
+            sortie = "(Also in "+key+" : "+value["title"]
+            if "year" in value:
+                sortie += " ("+value["year"]+") "
+            sortie += ")\\\\\\\\"
+            print(sortie)
 print("")
 print("\\documentclass{article}")
 print("")

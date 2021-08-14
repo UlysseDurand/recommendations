@@ -1,9 +1,19 @@
+import json
+data = json.loads(open('reco.json').read())
+
 ?????html[index.html]
 %
 def printbook(e):
     print("<h4>"+e["title"]+"</h4>")
     print("<i>By "+e["author"]+"</i><br>")
-    print("First published in "+e["year"])
+    print("First published in "+e["year"]+"<br>")
+    if ("trad" in e):
+        for key,value in e["trad"].items():
+            sortie = "(Also in "+key+" : "+value["title"]
+            if "year" in value:
+                sortie += " ("+value["year"]+") "
+            sortie += ")<br>"
+            print(sortie)
 %
 <!DOCTYPE HTML>
 <head>
@@ -25,7 +35,14 @@ for key,value in data["books"].items():
 def printbook(e):
     print("\subsubsection{"+e["title"]+"}")
     print("\textit{By "+e["author"]+"}\\\\")
-    print("First published in "+e["year"])
+    print("First published in "+e["year"]+"\\\\")
+    if ("trad" in e):
+        for key,value in e["trad"].items():
+            sortie = "(Also in "+key+" : "+value["title"]
+            if "year" in value:
+                sortie += " ("+value["year"]+") "
+            sortie += ")\\\\"
+            print(sortie)
 %
 \documentclass{article}
 

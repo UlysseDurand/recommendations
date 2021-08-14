@@ -4,8 +4,8 @@ import os
 
 def parselanguinv(t):
     lines = t.split("\n")
-    res = {}
-    current = ""
+    res = {"all":{"content":"","fileout":"base.txt"}}
+    current = "all"
     for j in range(len(lines)):
         line = lines[j]
         regres = re.search(r"^\?\?\?\?\?(.*)\[(.*)\]$",line)
@@ -21,9 +21,8 @@ def parselanguinv(t):
 
     for key,value in res.items():
         tmp = open("tmp.py",'w+')
-        tmp.write("import json\ndata = json.loads(open(\"reco.json\").read())\n")
         splitted = value["content"].split("%")
-        final = ""
+        final = res["all"]["content"]
         lasortie = open(value["fileout"],'w+')
         for i in range(len(splitted)):
             if (i%2==0):
