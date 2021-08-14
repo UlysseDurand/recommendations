@@ -3,8 +3,8 @@ data = json.loads(open("reco.json").read())
 print("")
 
 def printbook(e):
-    print("\\subsubsection*{"+e["title"]+"}")
-    print("\textit{By "+e["author"]+"}\\\\")
+    print("\\subsubsection{"+e["title"]+"}")
+    print("\\textit{By "+e["author"]+"}\\\\\\\\")
     print("First published in "+e["year"])
 print("")
 print("\\documentclass{article}")
@@ -14,7 +14,7 @@ print("    \\section{Books}")
 print("")
 
 for key,value in data["books"].items():
-    print("\subsection*{"+key+"}")
+    print("\\subsection{"+key+"}")
     for e in value:
         printbook(e)
 print("")

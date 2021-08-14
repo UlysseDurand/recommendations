@@ -29,14 +29,14 @@ def parselanguinv(t):
             if (i%2==0):
                 todisplay = splitted[i].split("\n")
                 for e in todisplay:
-                    
-                    final+=("print(\""+e.replace("\\","\\\\")+"\")\n")
+                    final+=("print(\""+e+"\")\n")
             else:
                 final+=(splitted[i])
-        print(final)
         tmp.write(final)
-        os.system("python tmp.py >> "+value["fileout"])
         tmp.close()
+        os.system("sed -i 's/\\\\/\\\\\\\\/g' tmp.py")
+        # os.system("sed -i 's/\"/\\\"/g' tmp.py")
+        os.system("python3 tmp.py >> "+value["fileout"])
     
 codeaffich = open("affich.languinv").read()
 parselanguinv(codeaffich)

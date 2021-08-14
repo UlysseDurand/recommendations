@@ -1,20 +1,20 @@
 ?????html[index.html]
 %
 def printbook(e):
-    print("<h2>"+e["title"]+"</h2>")
+    print("<h4>"+e["title"]+"</h4>")
     print("<i>By "+e["author"]+"</i><br>")
     print("First published in "+e["year"])
 %
 <!DOCTYPE HTML>
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>Recommendations</title>
 </head>
 <body>
 <h1>Books</h1>
 %
 for key,value in data["books"].items():
-    print("<h1>"+key+"</h1>")
+    print("<h3>"+key+"</h3>")
     for e in value:
         printbook(e)
 %
@@ -23,7 +23,7 @@ for key,value in data["books"].items():
 ?????latex[recommendations.tex]
 %
 def printbook(e):
-    print("\\subsubsection*{"+e["title"]+"}")
+    print("\subsubsection{"+e["title"]+"}")
     print("\textit{By "+e["author"]+"}\\\\")
     print("First published in "+e["year"])
 %
@@ -33,7 +33,7 @@ def printbook(e):
     \section{Books}
 %
 for key,value in data["books"].items():
-    print("\subsection*{"+key+"}")
+    print("\subsection{"+key+"}")
     for e in value:
         printbook(e)
 %
