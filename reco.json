@@ -1,0 +1,61 @@
+{
+"books" : {
+    "Computer science" :[
+        {
+            "title" : "Compilers: Principles, Techniques, and Tools",
+            "author" : "Alfred V. Aho, Monica S. Lam, Ravi Sethi, and Jeffrey D. Ullman",
+            "year" : "1962"
+        },
+        {
+            "title" : "Introduction to algorithms",
+            "author" : "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein",
+            "year" : "1990",
+            "trad" : {
+                "fr" : {
+                    "title" : "Introduction à l'algorithmique"
+                }
+            }
+        }
+    ],
+    "Mathematics" : [
+        {
+            "title" : "Category Theory",
+            "author" : "Steve Awodey",
+            "year" : "2006"
+        },
+        {
+            "title" : "A first course in abstract algebra",
+            "author" : "John B Fraleigh",
+            "year" : "1967"
+        },
+        {
+            "title" : "Proofs from THE BOOK",
+            "author" : "Martin Aigner and Günter M. Ziegler",
+            "year" : "1998",
+            "trad" : {
+                "fr" : {
+                    "title" : "Raisonnements divins"
+                }
+            }
+        },
+        {
+            "title" : "Intuitionistic Type Theory",
+            "author" : "Martin-Löf",
+            "year" : "1972"
+        }
+    ],
+    "Others" : [
+        {
+            "title" : "The Equation of Knowledge : From Bayes' Rule to a Unified Philosophy of Science",
+            "author" : "Lê Nguyên Hoang",
+            "year" : "2020",
+            "trad" : {
+                "fr" : {
+                    "title" : "La formule du savoir : une philosophie unifiée fondée sur le théorème de Bayes",
+                    "year" : "2018"
+                }
+            }
+        }
+    ]
+}
+}
